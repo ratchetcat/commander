@@ -2,8 +2,7 @@
 
 == DESCRIPTION:
 
-Commander is intended to simplify the execution and capture of output from system commands --
-it essentially works as a bridge between the open4 gem and a logging facility, with some convenience methods thrown in.
+Commander combines the execution of system commands and logging.
 
 == FEATURES/PROBLEMS:
 
