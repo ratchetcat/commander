@@ -2,7 +2,7 @@
 
 == DESCRIPTION:
 
-Commander combines the execution of system commands and logging.
+Commander combines the execution of system commands with logging. 
 
 == FEATURES/PROBLEMS:
 
@@ -14,7 +14,9 @@ Commander uses the open4 gem and the ruby logger to accomplish these tasks.
 
 == SYNOPSIS:
 
-Commander was intended for use in rake tasks which launched multiple system commands. Program flow had to be varied based on the exit status or source of the output from these commands, so Commander includes some convenience methods which encapsulate the logic needed for that purpose.
+Commander was originally intended for use in rake tasks launching multiple system commands. Program flow was varied based on the exit status or source of the output from these commands and Commander includes some convenience methods for handling such situations.
+
+Setup:
 
   log = Logger.new( STDOUT )
   log.level = Logger::Warn 
@@ -32,13 +34,13 @@ Alternatively, you may add commands to an array for batch execution:
   c.commands << "ls -ltrh"
   c.run_commands()
 
-Exit status of a single command is trivial to check:
+Exit status of a single command is trivial to check (thanks to the open4 gem):
 
   c = Commander.new( log )
   c.run( "df -h" )
   p c.exit_status #=> 0
 
-Because Commander is tied to the ruby logger, you may easily check for error messages:
+Commander adds a buffer to the ruby logger, which allows us to perform a simple check for errors over the whole log:
 
   c = Commander.new( log )
   c.run( "df -h" )
