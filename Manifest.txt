@@ -4,6 +4,7 @@ Manifest.txt
 PostInstall.txt
 README.txt
 Rakefile
+commander.gemspec
 config/hoe.rb
 config/requirements.rb
 lib/commander.rb
@@ -16,6 +17,7 @@ tasks/deployment.rake
 tasks/environment.rake
 tasks/website.rake
 test/test_commander.rb
+test/test_github_environment.rb
 test/test_helper.rb
 website/index.html
 website/index.txt
