@@ -1,11 +1,11 @@
 require 'commander'
 
 AUTHOR = 'Jon Fuller'  # can also be an array of Authors
-EMAIL = "ratchetcat+gem@gmail.com"
-DESCRIPTION = "Commander creates a bridge between system commands and logger."
+EMAIL = "ratchetcat+github@gmail.com"
+DESCRIPTION = "Commander combines the execution of system commands with logging."
 GEM_NAME = 'commander' # what ppl will type to install your gem
 RUBYFORGE_PROJECT = 'commander' # The unix name for your project
-HOMEPATH = "http://#{RUBYFORGE_PROJECT}.rubyforge.org"
+HOMEPATH = "http://github.com/ratchetcat/commander"
 DOWNLOAD_PATH = "http://rubyforge.org/projects/#{RUBYFORGE_PROJECT}"
 EXTRA_DEPENDENCIES = [
 ['open4', '>= 0.9.6']
