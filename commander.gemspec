@@ -1,4 +1,3 @@
-(in /home/ratchetcat/projects/commander)
 Gem::Specification.new do |s|
   s.name = %q{commander}
   s.version = "1.0.1"
