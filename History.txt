@@ -1,3 +1,7 @@
+== 1.0.5 2008-09-10
+
+* Fixes to structure of gemspec, README.
+
 == 1.0.1 2008-09-09
 
 * Initial release
