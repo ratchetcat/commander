@@ -8,7 +8,7 @@ require 'logger'
 class Commander
 
   module VERSION #:nodoc:
-    MAJOR = 0
+    MAJOR = 1
     MINOR = 0
     TINY  = 5 
 
