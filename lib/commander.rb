@@ -3,13 +3,14 @@ $:.unshift(File.dirname(__FILE__)) unless
 
 require 'rubygems'
 require 'open4'
+require 'logger'
 
 class Commander
 
   module VERSION #:nodoc:
-    MAJOR = 1
+    MAJOR = 0
     MINOR = 0
-    TINY  = 3 
+    TINY  = 4 
 
     STRING = [MAJOR, MINOR, TINY].join('.')
   end
