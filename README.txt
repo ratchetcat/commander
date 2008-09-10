@@ -17,6 +17,9 @@ Commander uses the open4 gem and the ruby logger to accomplish these tasks.
 Commander was originally intended for use in rake tasks launching multiple system commands. Program flow was varied based on the exit status or source of the output from these commands and Commander includes some convenience methods for handling such situations.
 
 Setup:
+  
+  require 'rubygems'
+  require 'commander'
 
   log = Logger.new( STDOUT )
   log.level = Logger::Warn 
