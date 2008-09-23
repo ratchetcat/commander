@@ -1,6 +1,3 @@
-$:.unshift(File.dirname(__FILE__)) unless
-  $:.include?(File.dirname(__FILE__)) || $:.include?(File.expand_path(File.dirname(__FILE__)))
-
 require 'rubygems'
 require 'open4'
 require 'logger'
@@ -49,6 +46,12 @@ class Commander
     end
   end
 
+  class MockStatus
+    def exitstatus
+      1
+    end
+  end
+
   attr_accessor :commands, :exit_status, :log
 
   def initialize( logger )
@@ -74,13 +77,7 @@ class Commander
       stderr_array  = stderr.readlines
     rescue Exception => err
       # set status.exitstatus to 1 due to failure
-      status = Object.new()
-      status.instance_eval do
-        def exitstatus
-          1
-        end
-      end
-
+      status = MockStatus.new()
       stdout_array = []
       stderr_array = [ err ]
     end
